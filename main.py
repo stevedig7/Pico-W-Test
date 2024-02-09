@@ -1,15 +1,15 @@
-# Code 3
 from machine import Pin
 from utime import sleep
+from ota_updater import update_ota
 
 pin = Pin("LED", Pin.OUT)
+otaUpdatePin = Pin(5, Pin.IN, Pin.PULL_UP)
 
 print("LED starts flashing...")
 while True:
-    try:
-        pin.toggle()
-        sleep(0.3) # sleep 1sec
-    except KeyboardInterrupt:
-        break
-pin.off()
-print("Finished.")
+    pin.toggle()
+    sleep(1)
+
+    if not otaUpdatePin.value():
+        print('Updating code from GitHub')
+        update_ota()
