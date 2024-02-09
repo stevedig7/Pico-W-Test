@@ -1,4 +1,5 @@
 import machine
+from machine import Pin
 import network
 import usocket as socket
 import uhttpd
@@ -7,6 +8,7 @@ from SECRET import SSID, PASSWORD
 
 # Define pin number for the LED
 LED_PIN = 0  # Assuming LED is connected to Pin 0
+otaUpdatePin = Pin(5, Pin.IN, Pin.PULL_UP)
 
 # Connect to Wi-Fi
 def connect_wifi():
