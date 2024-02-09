@@ -8,7 +8,7 @@ otaUpdatePin = Pin(5, Pin.IN, Pin.PULL_UP)
 print("LED starts flashing...")
 while True:
     pin.toggle()
-    sleep(1)
+    sleep(0.2)
 
     if not otaUpdatePin.value():
         print('Updating code from GitHub')
