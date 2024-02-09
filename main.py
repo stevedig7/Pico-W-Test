@@ -3,15 +3,12 @@ from utime import sleep
 from ota_updater import update_ota
 
 def ota():
-    for _ in range(3):
-        onBoardLED.toggle()
-        sleep(1)
-        print('Updating code from GitHub')
+    onBoardLED.value(1)
     update_ota()
 
 def blink():
     onBoardLED.toggle()
-    sleep(1)
+    sleep(0.1)
 
 # –––––––––––––––––––––––––––––––––––––
 onBoardLED = Pin("LED", Pin.OUT)
