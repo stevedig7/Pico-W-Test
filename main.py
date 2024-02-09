@@ -1,4 +1,4 @@
-# Code 2
+# Code 3
 from machine import Pin
 from utime import sleep
 
