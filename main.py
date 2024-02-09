@@ -11,7 +11,7 @@ def ota():
 
 def blink():
     onBoardLED.toggle()
-    sleep(0.1)
+    sleep(1)
 
 # –––––––––––––––––––––––––––––––––––––
 onBoardLED = Pin("LED", Pin.OUT)
