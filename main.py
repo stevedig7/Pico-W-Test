@@ -4,7 +4,7 @@ from utime import sleep
 
 def blink():
     onBoardLED.toggle()
-    sleep(1)
+    sleep(5)
 # ––––––––––––––––––––––––––
 otaUpdatePin = Pin(5, Pin.IN, Pin.PULL_UP)
 onBoardLED = Pin("LED", Pin.OUT)
